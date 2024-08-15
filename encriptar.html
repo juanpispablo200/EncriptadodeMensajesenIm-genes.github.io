@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptado de Mensajes en Imágenes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Fondo negro puro */
+            margin: 0;
+            padding: 20px;
+            color: #fff; /* Texto blanco */
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #000; /* Fondo negro puro para el contenedor */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Sombra blanca para resaltar */
+            border-radius: 8px; /* Bordes redondeados */
+        }
+        h1 {
+            text-align: center;
+            color: #fff; /* Texto blanco */
+        }
+        .input-group {
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #fff; /* Texto blanco */
+        }
+        input[type="file"],
+        input[type="text"] {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
+        }
+        button {
+            background-color: #28a745; /* Verde para el botón */
+            color: #fff; /* Texto blanco */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838; /* Verde oscuro en hover */
+        }
+        #output {
+            margin-top: 20px;
+            text-align: center;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Encriptado de Mensajes en Imágenes</h1>
+        <div class="input-group">
+            <label for="imageInput">Selecciona una imagen</label>
+            <input type="file" id="imageInput" accept="image/*">
+        </div>
+        <div class="input-group">
+            <label for="messageInput">Mensaje a encriptar</label>
+            <input type="text" id="messageInput" placeholder="Escribe tu mensaje aquí">
+        </div>
+        <button id="encryptButton">Encriptar Mensaje</button>
+        <canvas id="imageCanvas"></canvas>
+        <div id="output">
+            <a id="downloadLink" style="display:none;">Descargar Imagen Encriptada</a>
+        </div>
+    </div>
+    <script src="encriptar.js"></script>
+</body>
+</html>
+
+
+
